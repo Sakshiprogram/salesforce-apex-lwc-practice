@@ -1,0 +1,27 @@
+<template>
+    <lightning-card title="Account Table">
+        <lightning-input data-formfield="Acc" label="Enter Account Name" type="search"></lightning-input>
+        <lightning-button variant="brand" icon-name="utility:search" label="Search" onclick={searchAccountHandler}></lightning-button>
+
+        <template if:true={showTableFlag}>
+            <!--HTML Table start-->
+
+            <table class="slds-table slds-table--bordered slds-table--striped">
+                <thead>
+                    <tr>
+                        <th scope="'col"><span class="slds-turncate">Name</span></th>
+                        <th scope="'col"><span class="slds-turncate">Rating</span></th>
+                        <th scope="'col"><span class="slds-turncate">SLA</span></th>
+                        <th scope="'col"><span class="slds-turncate">CreatedDate</span></th>
+                    </tr>
+                </thead>
+                <tbody><tr>
+                    <td>{objAccount.Name}</td>
+                    <td>{objAccount.Rating}</td>
+                    <td>{objAccount.SLA__c}</td>
+                    <td> <lightning-formatted-date-time value={objAccount.CreatedDate}></lightning-formatted-date-time></td>
+                </tr></tbody>
+            </table>
+        </template>
+    </lightning-card>
+</template>

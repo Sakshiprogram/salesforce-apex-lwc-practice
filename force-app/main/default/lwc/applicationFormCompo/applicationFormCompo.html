@@ -1,0 +1,13 @@
+<template>
+    <lightning-card title="Applicant from ">
+        <lightning-input data-formfield="name" type="'text" label="Enter Your Name"></lightning-input><br/>
+        <lightning-input data-formfield="dob" type="date" label="Enter Your DOB"></lightning-input><br/>
+        <lightning-input data-formfield="email" type="email" label="Enter Your Email"></lightning-input>
+
+        <lightning-button variant="brand" label="Show" onclick={showApplicantRecord}></lightning-button><br/>
+        you have entered:<br/>
+        Name: {name}<br/>
+        DOB: {dob}<br/>
+        Email: {email}
+    </lightning-card>
+</template>

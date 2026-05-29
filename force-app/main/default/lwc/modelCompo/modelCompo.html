@@ -1,0 +1,11 @@
+<template>
+    <lightning-card title="Parent">
+        <lightning-input data-formfield="Acc" label="Enter Account Name" type="text"> </lightning-input><br/>
+        <lightning-button variant="brand" label="Send" icon-name="utility:send" onclick={sendHadler}></lightning-button> &nbsp;
+         <lightning-button variant="destructive" label="Clear" icon-name="utility:clear" onclick={clearHandler}></lightning-button>
+
+         <c-car-compo data={name}>
+
+         </c-car-compo>
+    </lightning-card>
+</template>

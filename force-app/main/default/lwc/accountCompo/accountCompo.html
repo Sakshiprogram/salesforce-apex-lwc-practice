@@ -1,0 +1,16 @@
+<template>
+    <lightning-card title="Account Form" >  
+        <lightning-input data-formfield="Acc" label="Enter Account Name" type="text"></lightning-input><br/>
+
+      <lightning-combobox
+      name="Rating"
+      label="Select Rating"
+      value="value"
+      placeholder="Select Rating"
+      options={selectOption}
+      onchange={dataHandler}></lightning-combobox>
+
+
+        <lightning-button variant="brand" label="Submit" onclick={accountHandler}></lightning-button>
+    </lightning-card>
+</template>

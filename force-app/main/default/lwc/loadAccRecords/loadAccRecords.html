@@ -1,0 +1,14 @@
+<template>
+    <lightning-card title="Account Table">
+        UserName={userName} <br/>
+        Total Records ={totalRecords}<br/>
+
+        <lightning-datatable
+        key-field="Id"
+        data={accList}
+        columns={columns}
+        draft-value={draftValues}
+        onrowaction={selcectedRecordsHandler}>
+    </lightning-datatable>
+    </lightning-card>
+</template>

@@ -1,0 +1,13 @@
+<template>
+    <lightning-card title="Latest 5 Contact Records">
+<!-- <lightning-button variant="brand" label="Search" icon-name="utility:search" onclick={contactHandler}></lightning-button><br/> -->
+
+<lightning-datatable
+  key-field="id"
+  data={accList}
+  columns={columns}
+>
+</lightning-datatable>
+
+    </lightning-card>
+</template>

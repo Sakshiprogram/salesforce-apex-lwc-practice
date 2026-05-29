@@ -1,0 +1,14 @@
+<template>
+    <lightning-card title="latest 10 Account Records">
+     <!--  <lightning-button variant="brand" label="Search" icon-name="utility:search" onclick={searchHandler}></lightning-button><br/> -->
+
+        <lightning-datatable
+        key-field="Id" 
+        data={accList}
+        columns={columns}
+        draft-values={draftValues}
+        onrowselection={selectedRecordsHandler}
+        ></lightning-datatable>
+        
+    </lightning-card>
+</template>

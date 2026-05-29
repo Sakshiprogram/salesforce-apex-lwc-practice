@@ -1,0 +1,63 @@
+<template>
+    <lightning-card title="CRUD Operations">
+
+<lightning-button variant="brand" label="Create" icon-name="utility:record_create" onclick={createAccountHandler}></lightning-button> &nbsp;
+<lightning-button variant="success" label="Search" icon-name="utility:search" onclick={searchAccountHandler}></lightning-button> &nbsp;
+<lightning-button variant="brand-outline" label="Edit" icon-name="utility:edit" onclick={editAccountHandler}></lightning-button> &nbsp;
+<lightning-button variant="destructive" label="Delete" icon-name="utility:delete" onclick={deleteAccountHandler}></lightning-button> 
+
+
+
+<!--Create Button Start-->
+<template if:true={showCreateHandler}>
+<lightning-input data-formfield="Acc" type="text" label="Enter Account Name"></lightning-input><br/>
+
+<lightning-combobox
+name="Type"
+label="Select Type"
+value={value}
+placeholder="Select Type"
+options={typeOptions}
+onchange={typeHandleChange}></lightning-combobox>
+
+<lightning-combobox
+name="SLA"
+label="Select SLA"
+value={value}
+placeholder="Select SLA"
+options={slaOptions}
+onchange={slaHandleChange}></lightning-combobox>
+
+<lightning-button variant="brand" label="Create Now" icon-name="utility:record_create" onclick={createNowAccountHandler}></lightning-button>
+<!--Create Button End-->
+</template>
+
+<!--Search Button Start-->
+
+<template if:true={showSearchHandler}>
+    <lightning-input data-formfield="Account" type="search" label="Enter Account Name"></lightning-input><br/>
+    <template if:true={showSearchField}>
+        <lightning-input data-formfield="Acc1" type="text" label="Type" value={accObj.Type} disabled={typeFieldFlag}></lightning-input><br/>
+        <lightning-input data-formfield="Acc2" type="text" label="SLA" value={accObj.SLA__c} disabled={slaFieldFlag}></lightning-input><br/>
+    </template>
+
+<lightning-button variant="success" label="Search Now" icon-name="utility:search" onclick={searchNowAccountHandler}></lightning-button>
+<!--Search button end-->
+
+</template>
+<!--Edit button start-->
+
+<template if:true={showEditHandler}>
+    <lightning-button variant="brand-outline" label="Edit Now" icon-name="utility:edit" onclick={editNowAccountHandler}></lightning-button>
+</template>
+
+</lightning-card>
+</template>
+
+<!--Delete Button -->
+<!-- 
+<template if:true={showDeleteHandler}>
+    <lightning-button variant="destructive" label="Delete Now" icon-name="utility:delete" onclick={deleteNowAccountHandler}></lightning-button>
+</template>
+-->
+    

@@ -1,0 +1,14 @@
+<template>
+    <lightning-card title="Account Detail">
+        <lightning-input label="Enter the Account Id" type="text" data-fromfield="Acc"></lightning-input>
+         <lightning-button variant="brand" icon-name="utility:search" label="Search" onclick={searchHandler}></lightning-button>
+
+
+ <lightning-datatable
+  key-field="id"
+  data={conList}
+  columns={columns}
+></lightning-datatable>
+
+    </lightning-card>
+</template>

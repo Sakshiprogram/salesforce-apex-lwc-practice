@@ -1,0 +1,16 @@
+<template>
+    <lightning-card title="Applicant Table">
+         <lightning-input data-formfield="App" label="Enter Applicant Id" type="text"></lightning-input><br/>
+         <lightning-button variant="brand" icon-name="utility:search" label="Search" onclick={searchHandler}></lightning-button>
+
+
+    <lightning-datatable
+     key-field="Id"
+     data={appList}
+     columns={columns} 
+     draft-values={draftValues} 
+     onrowselection={selectedRecordsHandler} 
+    ></lightning-datatable>
+
+    </lightning-card>
+</template>

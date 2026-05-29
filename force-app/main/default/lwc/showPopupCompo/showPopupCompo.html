@@ -1,0 +1,11 @@
+<template>
+      <lightning-card title="Parent">
+        <lightning-button variant="brand" label="show Popup message" icon-name="utility:call" onclick={showPopupHandler}></lightning-button><br/>
+
+        <template if:true={showPopup}>
+            <c-popup-model-compo data={name} onchilddata={parentMethod}>
+
+            </c-popup-model-compo>
+        </template>
+    </lightning-card>
+</template>

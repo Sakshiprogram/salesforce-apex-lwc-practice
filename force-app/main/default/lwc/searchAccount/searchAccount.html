@@ -1,0 +1,11 @@
+<template>
+    <lightning-card title="Account Search">
+        <lightning-input data-formfield="Acc" label="Enter Account Name" type="text"></lightning-input>
+        <lightning-button variant="success" label="Search" onclick={searchAccountHandler}></lightning-button><br/>
+
+     Name={objAcc.Name}<br/>
+     Rating={objAcc.Rating}<br/>
+     SLA={objAcc.SLA__c}<br/>
+     <p>Created Date=<lightning-formatted-date-time value={objAcc.CreatedDate}></lightning-formatted-date-time></p>
+    </lightning-card>
+</template>

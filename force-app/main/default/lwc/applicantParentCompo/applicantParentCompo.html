@@ -1,0 +1,15 @@
+<template>
+    <lightning-card title="parent">
+        <lightning-input data-formfield="App" label="Enter Applicant Id" type="text"></lightning-input>
+        <lightning-button label="Search" icon-name="utility:search" onclick={searchHandler}></lightning-button>
+
+        <template if:true={showPopup}>
+    <c-applicant-child-compo  data={objApp.Name} 
+                app-list={appList} onchilddata={parentMethod}>
+
+    </c-applicant-child-compo>
+
+</template>
+    </lightning-card>
+
+</template>

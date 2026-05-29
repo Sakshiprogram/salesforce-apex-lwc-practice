@@ -1,0 +1,19 @@
+<template>
+    <lightning-card title="Applicant Form">
+        <lightning-input data-formfield="firstName" label="Enter Your First Name" type="text"></lightning-input><br/>
+        <lightning-input data-formfield="lastName" label="Enter Your Last Name" type="text"></lightning-input><br/>
+         <lightning-input data-formfield="dob" label="Enter Your DoB" type="date"></lightning-input><br/>
+          <lightning-input data-formfield="email" label="Enter Your EmailID" type="email"></lightning-input><br/>
+
+          <lightning-combobox
+      name="Gender"
+      label="Select Gender"
+      value="value"
+      placeholder="Select Gender"
+      options={selectOption}
+      onchange={dataHandler}></lightning-combobox><br/>
+
+      <lightning-button variant="brand" label="Submit" onclick={applicantHandler}></lightning-button>
+           
+    </lightning-card>
+</template>

@@ -1,0 +1,34 @@
+<template>
+    <lightning-card title="Account Table">
+          Total Records={totalRecords}
+        <lightning-combobox
+        name="Select Type"
+        label="Type"
+        value={value}
+        placeholder="select Account Type"
+        options={typeOptions}
+        onchange={typeHandleChange}></lightning-combobox><br/>
+         <table class="slds-table slds-table--bordered slds-table--striped">
+            <thead>
+                <tr>
+                    <th scope="col"><span class="slds-turncate">Name</span></th>
+                    <th scope="col"><span class="slds-turncate">Rating</span></th>
+                    <th scope="col"><span class="slds-turncate">SLA</span></th>
+                    <th scope="col"><span class="slds-turncate">CreatedDate</span></th>
+                    <th scope="col"><span class="slds-turncate">Type</span></th>
+                </tr>
+            </thead>
+            <tbody>
+                <template for:each={accList} for:item="objAcc">
+                    <tr key={objAcc.Id}>
+                        <td>{objAcc.Name}</td>
+                        <td>{objAcc.Rating}</td>
+                        <td>{objAcc.SLA__c}</td>
+                        <td> <lightning-formatted-date-time value={objAcc.CreatedDate}></lightning-formatted-date-time></td>
+                        <td>{objAcc.Type}</td>
+                    </tr>
+                </template>
+            </tbody>
+         </table>
+    </lightning-card>
+</template>

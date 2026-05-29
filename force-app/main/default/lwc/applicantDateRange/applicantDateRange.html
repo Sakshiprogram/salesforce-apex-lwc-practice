@@ -1,0 +1,13 @@
+<template>
+    <lightning-card title="Applicant Detail">
+        <lightning-input  type="date" label="Select From Date" onchange={handleStartDate}></lightning-input><br/>
+        <lightning-input  type="date" label="Select To Date"  onblur={handleEndDate}></lightning-input>
+
+<lightning-datatable 
+key-field="id" 
+data={appList} 
+columns={columns}>
+</lightning-datatable>
+
+    </lightning-card>
+</template>
